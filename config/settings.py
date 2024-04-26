@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_fashion_db',
+        'NAME': 'blockydb',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
