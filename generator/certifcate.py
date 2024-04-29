@@ -52,7 +52,7 @@ def write_name(
     file_name = os.path.join(base_dir+"/assets/generated/") +  "_".join(name.split(' ')) + str(random.randint(0, 255)) + ".png"
     # Save the image
     img.show()
-    # img.save(file_name)
+    img.save(file_name)
     # Return the name we generated
     return file_name
 
