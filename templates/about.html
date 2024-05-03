@@ -5,43 +5,73 @@ title here
 {% block head %}{% endblock %}
 
 {% block css %}
-<style></style>
-{% endblock %}
-{% block content %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        /* .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } */
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .about-content {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        {% endblock %}
+        {% block content %}
 
+<body>
     <section id="about">
-      <div class="container">
-          <h2>About CertificateChain</h2>
-          <p>CertificateChain is a revolutionary platform that leverages blockchain technology to ensure the
-              authenticity and integrity of digital certificates. Our mission is to provide a secure and
-              tamper-proof solution for certificate generation and validation.</p>
-  
-          <h3>How it Works</h3>
-          <p>CertificateChain utilizes the decentralized nature of blockchain to create a transparent and
-              immutable ledger of certificates. Here's how it works:</p>
-          <ol>
-              <li><strong>Certificate Generation:</strong> Users can easily create digital certificates for
-                  various purposes, such as academic achievements, professional certifications, or
-                  participation in events. These certificates are securely stored on the blockchain.</li>
-              <li><strong>Blockchain Validation:</strong> Each certificate is associated with a unique digital
-                  signature and stored on the blockchain. This ensures that the certificate's authenticity can
-                  be easily verified by anyone.</li>
-              <li><strong>Verification Process:</strong> Individuals or organizations can verify the
-                  authenticity of a certificate by simply accessing the blockchain and verifying the digital
-                  signature. This eliminates the need for centralized authorities and minimizes the risk of
-                  fraud or tampering.</li>
-          </ol>
-  
-          <h3>Our Team</h3>
-          <p>The CertificateChain team is comprised of passionate professionals with expertise in blockchain
-              technology, cryptography, and web development. We are dedicated to ensuring the security and
-              reliability of our platform.</p>
-  
-          <h3>Contact Us</h3>
-          <p>If you have any questions or feedback, please don't hesitate to contact us. We'd love to hear from
-              you!</p>
-          <p>Email: info@certificatechain.com</p>
-      </div>
-  </section>
-  
+    <div class="container">
+        <h1>About BlockCertify</h1>
+        <div class="about-content">
+            <p>Welcome to BlockCertify, a cutting-edge platform for generating and validating certificates using blockchain technology.</p>
+            <p>Our mission is to revolutionize the certification process by leveraging the security and immutability of blockchain. With our system, you can create tamper-proof certificates and easily verify their authenticity.</p>
+            <p>Key Features:</p>
+            <ul>
+                <li>Secure Certificate Generation: Utilize blockchain to generate certificates that cannot be tampered with or falsified.</li>
+                <li>Effortless Verification: Verify the authenticity of certificates instantly using blockchain technology.</li>
+                <li>User-Friendly Interface: Our intuitive interface makes it easy to create and verify certificates, ensuring a seamless experience for users.</li>
+                <li>Scalable Solution: Whether you need to issue certificates for individuals or organizations, our system can scale to meet your needs.</li>
+            </ul>
+            <p>Ready to experience the future of certificate management? Get started today!</p>
+            <!-- <a href="#" class="button">Get Started</a> -->
+        <!-- </div> -->
+    </div>
+    </section>
+
+    <script>
+        // JavaScript code can be added here if needed
+    </script>
+</body>
+
 {% endblock %}
