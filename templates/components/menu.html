@@ -2,7 +2,7 @@
 <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-        <h1 class="logo me-auto me-lg-0"><a href="index.html">BlockCertify<span></span></a></h1>
+        <h1 class="logo me-auto me-lg-0"><a href="{% url 'home' %}">BlockCertify<span></span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="/static/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -15,13 +15,13 @@
                 <li><a class="nav-link scrollto" href="{% url 'teams' %}">Team</a></li>
                 
                 <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
-                <li><a class="nav-link scrollto" href="{% url 'helpdesk' %}">Help Desk</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'dashboard' %}">Dashboard</a></li>
                 
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
 
-        <a href="" class="get-started-btn scrollto">Register/Login</a>
+        <a href="{% url 'login' %}" class="get-started-btn scrollto">Login</a>
 
     </div>
 </header><!-- End Header -->

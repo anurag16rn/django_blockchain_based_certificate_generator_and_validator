@@ -11,6 +11,7 @@ title here
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            color: #333;
         }
         /* .container {
             max-width: 800px;
@@ -20,17 +21,18 @@ title here
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         } */
-        h1, h2 {
+        h1 {
             color: #333;
-        }
-        p {
-            color: #666;
+            text-align: center;
         }
         .button {
-            display: inline-block;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
+            text-align: center;
             text-decoration: none;
             border-radius: 4px;
             transition: background-color 0.3s;
@@ -39,29 +41,23 @@ title here
             background-color: #0056b3;
         }
     </style>
-        {% endblock %}
-        {% block content %}
+ {% endblock %}
+ {% block content %}
 
 <body>
-    <section id="helpdesk">
+    <section id="dashboard">
     <div class="container">
-        <h1>Help Desk</h1>
-        <p>Welcome to the Help Desk for Blockchain Certificate System. How can we assist you?</p>
-        <h2>Common Issues</h2>
-        <ul>
-            <li><a href="#" class="help-link" onclick="redirectTo('faq.html')">FAQs</a></li>
-            <li><a href="#" class="help-link" onclick="redirectTo('contact.html')">Contact Us</a></li>
-        </ul>
-        <h2>Still Need Help?</h2>
-        <p>If you still have questions or encounter issues, feel free to contact our support team:</p>
-        <a href="#" class="button" onclick="redirectTo('contact.html')">Contact Support</a>
+        <h1>Welcome to the Dashboard</h1>
+        <a href="#" class="button">Generate Certificate</a>
+        <a href="#" class="button">Verify Certificate</a>
+        <a href="#" class="button">Manage Templates</a>
+        <a href="#" class="button">Manage Users</a>
+        <a href="#" class="button">View Reports</a>
     </div>
     </section>
 
     <script>
-        function redirectTo(page) {
-            window.location.href = page;
-        }
+        // JavaScript code can be added here if needed
     </script>
 </body>
 
