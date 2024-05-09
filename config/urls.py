@@ -29,7 +29,7 @@ urlpatterns = [
     path('teams', TemplateView.as_view(template_name='teams.html'), name='teams'),
     path('contact', TemplateView.as_view(template_name='contact.html'), name='contact'),
     path('dashboard', TemplateView.as_view(template_name='dashboard.html'), name='dashboard'),
-    path('login', TemplateView.as_view(template_name='accounts/login.html'), name='login'),
+
 ]
 
 
