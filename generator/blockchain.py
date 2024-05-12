@@ -1,6 +1,16 @@
 import hashlib
 import datetime as date
 
+import uuid
+from datetime import datetime
+
+# Function to generate a unique code
+def generate_unique_code(name, course, date):
+    current_time = datetime.now().strftime("%Y%m%d%H%M%S%f")
+    date = date.strftime("%Y%m%d")
+    unique_id = uuid.uuid5(uuid.NAMESPACE_OID, f"{name}{course}{date}{current_time}")
+    return str(unique_id)
+
 class Block:
     def __init__(self, index, timestamp, data, previous_hash):
         self.index = index

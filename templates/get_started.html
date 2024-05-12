@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Get Started</title>
   <style>
@@ -38,6 +39,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Welcome to BlockCertify!</h1>
@@ -51,20 +53,18 @@
     const loginButton = document.getElementById('loginButton');
     const admin = document.getElementById('adminloginButton');
 
-    registerButton.addEventListener('click', function() {
-      alert('Register button clicked!');
-      // Add your registration logic here
+    registerButton.addEventListener('click', function () {
+      window.location.href = '{% url "register" %}';
     });
 
-    loginButton.addEventListener('click', function() {
-      alert('Login button clicked!');
-      // Add your login logic here
+    loginButton.addEventListener('click', function () {
+      window.location.href = '{% url "login" %}';
     });
 
-    admin.addEventListener('click', function() {
-      alert('Admin Login button clicked!');
-      // Add your login logic here
+    admin.addEventListener('click', function () {
+      window.location.href = '{% url "admin:index" %}';
     });
   </script>
 </body>
+
 </html>

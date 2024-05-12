@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
       align-items: center;
       height: 100vh;
     }
+
     .container {
       width: 320px;
       background-color: #34495e;
@@ -23,17 +25,20 @@
       padding: 40px;
       box-sizing: border-box;
     }
+
     h1 {
       margin-bottom: 30px;
       text-align: center;
       color: #fff;
     }
+
     label {
       display: block;
       font-weight: bold;
       margin-bottom: 5px;
       color: #fff;
     }
+
     input[type="text"],
     input[type="password"] {
       width: 100%;
@@ -43,6 +48,7 @@
       border-radius: 4px;
       box-sizing: border-box;
     }
+
     input[type="submit"] {
       width: 100%;
       padding: 10px;
@@ -53,9 +59,11 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     input[type="submit"]:hover {
       background-color: #1a5276;
     }
+
     .error-message {
       color: red;
       margin-top: 10px;
@@ -63,10 +71,12 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Login to your account</h1>
-    <form id="login-form">
+    <form id="login-form" method="POST">
+      {% csrf_token %}
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
       <label for="password">Password:</label>
@@ -75,17 +85,6 @@
       <div class="error-message" id="error-message"></div>
     </form>
   </div>
-  <script>
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-
-      // Example validation (replace with your own logic)
-      if (username !== 'admin' || password !== 'password') {
-        event.preventDefault(); // Prevent form submission
-        document.getElementById('error-message').innerText = 'Invalid username or password.';
-      }
-    });
-  </script>
 </body>
+
 </html>

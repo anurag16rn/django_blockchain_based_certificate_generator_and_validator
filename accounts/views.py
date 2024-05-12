@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Profile
 
 # Create your views here.
-def login(request):
+def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -16,9 +16,8 @@ def login(request):
             user = authenticate(request, username=username, password=password)
             if user is None:
                 messages.error(request, 'Invalid credentials')
-                redirect('clogin')
+                redirect('login')
             else:
-                # if user is a customer
                 login(request, user)
                 return redirect('home')
         else:
@@ -27,11 +26,12 @@ def login(request):
 
 def register(request):
     if request.method == "POST":
-        username = request.POST['username']
+        username = request.POST['uname']
+        fn = request.POST['firstName']
+        ln = request.POST['lastName']
         email = request.POST['email']
-        pwd1 = request.POST['password1']
-        pwd2 = request.POST['password2']
-        group = request.POST['group']
+        pwd1 = request.POST['password']
+        pwd2 = request.POST['cpassword']
         if pwd1 == pwd2:
             if User.objects.filter(username=username).exists():
                 messages.error(request, 'Username already exists')
@@ -39,9 +39,15 @@ def register(request):
                 messages.error(request, 'Email already exists')
             else:
                 user = User.objects.create_user(username=username, email=email, password=pwd1)
+                user.is_active = False # disable the user until the admin activates the account
                 user.save()
+                # create profile
+                profile = Profile(user=user, first_name=fn, last_name=ln)
+                profile.save()
                 messages.success(request, 'Account successfully created')
-                return redirect('clogin')
+                # disable the user
+                
+                return redirect('login')
         else:
             messages.error(request, 'Passwords do not match')
     return render(request, 'accounts/register.html')

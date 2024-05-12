@@ -15,7 +15,12 @@
                 <li><a class="nav-link scrollto" href="{% url 'teams' %}">Team</a></li>
                 
                 <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+                {% if user.is_authenticated %}
                 <li><a class="nav-link scrollto" href="{% url 'dashboard' %}">Dashboard</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
+                {% endif %}
                 
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
