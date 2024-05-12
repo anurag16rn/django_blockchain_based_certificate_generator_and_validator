@@ -91,16 +91,17 @@ title here
     <div class="row">
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon-box">
-          <div class="icon"><i class="bx bxl-dribbble"></i></div>
-          <h4><a href="">Generate Certificates</a></h4>
+          <div class="icon"><i class="bx bx-file"></i></div>
+          <h4><a href="{% url 'list' %}">Generate Certificates</a></h4>
           <p>Generate your Certificates here.</p>
         </div>
       </div>
 
+      
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
         <div class="icon-box">
           <div class="icon"><i class="bx bx-file"></i></div>
-          <h4><a href="">Verify Certificates</a></h4>
+          <h4><a href="{% url 'verify_cert' %}">Verify Certificates</a></h4>
           <p>Verify your Certificates here.</p>
         </div>
       </div>
