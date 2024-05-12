@@ -77,4 +77,4 @@ def write_name(
 
 if __name__ == "__main__":
     from datetime import datetime
-    write_name("Roait Jaiswal","Core Java",  datetime.now(), "1212312313131312312334", "203")
+    write_name("Rohit Jaiswal","Core Java",  datetime.now(), "1212312313131312312334", "203")
