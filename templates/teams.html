@@ -6,66 +6,145 @@ title here
 
 {% block css %}
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        /* .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        } */
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .team-member {
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 30px;
-        }
-        .team-member:last-child {
-            border-bottom: none;
-        }
-        .team-member img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            display: block;
-            margin: 0 auto 20px;
-        }
-        .team-member h2 {
-            text-align: center;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-        .team-member p {
-            text-align: center;
-            color: #666;
-        }
+        .team {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #151515;
+  margin: 0 3px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: ease-in-out 0.3s;
+  color: #484848;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team .member .social a:hover {
+  color: #151515;
+  background: #ffc451;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #151515;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
     </style>
     {% endblock %}
     {% block content %}
 
 <body>
-    <section id="teams">
-        <div class="container">
-            <h1>Meet Our Team</h1>
-            <div class="team-member">
-            <h2>Siddharth Singh</h2>
-            <p>Founder and CEO</p>
+    <section id="team" class="team">
+        <div class="container" data-aos="fade-up">
+      
+          <div class="section-title">
+            <h2>Team</h2>
+            <p>Check our Team</p>
+          </div>
+      
+          <div class="row">
+      
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img src="/static/img/team/team-1.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Siddharth Singh</h4>
+                  <span>Founder & Chief Executive Officer</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                  <img src="/static/img/team/team-3.jpg" class="img-fluid" alt="">
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Anurag Kumar</h4>
+                  <span>Lead Developer</span>
+                </div>
+              </div>
+            </div>
+      
+            
+      
+          </div>
+      
         </div>
-        <div class="team-member">
-            <h2>Anurag Kumar</h2>
-            <p>Lead Developer</p>
-        </div>
-        </div>
-    </section>
+      </section>
 </body>
 
 {% endblock %}
