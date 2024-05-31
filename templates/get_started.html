@@ -43,23 +43,23 @@
 <body>
   <div class="container">
     <h1>Welcome to BlockCertify!</h1>
-    <button class="button" id="registerButton">Register</button>
-    <button class="button" id="loginButton">Login</button>
+    <!-- <button class="button" id="registerButton">Register</button>
+    <button class="button" id="loginButton">Login</button> -->
     <button class="button" id="adminloginButton">Admin Login</button>
   </div>
 
   <script>
-    const registerButton = document.getElementById('registerButton');
-    const loginButton = document.getElementById('loginButton');
+    // const registerButton = document.getElementById('registerButton');
+    // const loginButton = document.getElementById('loginButton');
     const admin = document.getElementById('adminloginButton');
 
-    registerButton.addEventListener('click', function () {
-      window.location.href = '{% url "register" %}';
-    });
+    // registerButton.addEventListener('click', function () {
+    //   window.location.href = '{% url "register" %}';
+    // });
 
-    loginButton.addEventListener('click', function () {
-      window.location.href = '{% url "login" %}';
-    });
+    // loginButton.addEventListener('click', function () {
+    //   window.location.href = '{% url "login" %}';
+    // });
 
     admin.addEventListener('click', function () {
       window.location.href = '{% url "admin:index" %}';
